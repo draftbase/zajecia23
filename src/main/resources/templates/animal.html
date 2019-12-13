@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:///www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Schronisko</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <h1>Schronisko reksio i Klakier</h1>
+    </div>
+    <div>
+        <a href="/">Powrót do listy</a>
+        <h2 th:text="${animal.name}">Nazwa zwierzaka</h2>
+        <p th:text="${animal.description}">Opis zwierzęcia</p>
+    </div>
+</body>
+</html>

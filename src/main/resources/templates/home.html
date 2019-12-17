@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Schronisko</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="banner">
         <h1>Schronisko Reksio i Klakier</h1>
     </div>
     <a th:href="@{'/zwierzak?imie=' + ${animal.name}}" th:each="animal: ${animals}">
-        <img th:src="${animal.imageUrl}" style="width: 150px"/>
-        <div>
+        <img th:src="${animal.imageUrl}" style="width: 150px" class="float"/>
+        <div class="clearfix">
             <h2 th:text="${animal.name}"></h2>
             <p th:text="${animal.description}"></p>
         </div>

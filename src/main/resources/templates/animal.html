@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Schronisko</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="banner">
-        <h1>Schronisko reksio i Klakier</h1>
-    </div>
+    <div th:replace="banner :: banner"></div>
+    <a th:href="@{|/edit?imie=${animal.name}|}">Edytuj</a>
     <div>
         <a href="/">Powrót do listy</a>
         <h2 th:text="${animal.name}">Nazwa zwierzaka</h2>

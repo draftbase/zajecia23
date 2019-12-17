@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:///www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Schronisko</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div th:replace="banner :: banner"></div>
+<form method="post" th:action="${mode == 'edit' ? '/edit' : '/add'}" th:object="${animal}">
+    Imię: <input type="text" name="name" th:field="*{name}"><br/>
+    Opis: <textarea rows="10" th:field="*{description}">Opis zwierzaka</textarea><br/>
+    Zdjęcie: <input type="text" name="imageUrl" th:field="*{imageUrl}"><br/>
+    Kategoria:
+    <select th:field="*{species}">
+        <option disabled selected value="" hidden>Wybierz</option>
+        <option value="CAT">Kot</option>
+        <option value="DOG">Pies</option>
+        <option value="OTHERS">Inne</option>
+    </select>
+    <input type="submit" value="Wyślij">
+</form>
+</body>
+</html>
